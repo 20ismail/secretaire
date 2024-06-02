@@ -1,0 +1,4 @@
+.sub-menu {
+    display: none; /* Hide the subsections by default */
+    padding-left: 20px; /* Adjust indentation */
+}

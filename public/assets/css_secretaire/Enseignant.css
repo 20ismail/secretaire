@@ -1,0 +1,95 @@
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.dropdowncontainer {
+    background-color: #DAC0A3;
+    width: 100%;
+    margin: 10px 0;
+    padding: 20px;
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .dropdown {
+    display: inline-block;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .dropdown label {
+    margin-bottom: 3px;
+    color: #102C57;
+    font-weight: bold;
+  }
+  
+  .dropdown select {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #102C57;
+    border-radius: 5px;
+    background-color: #f3ece4;
+    color: #102C57;
+    font-weight: bold;
+  }
+  
+table {
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+
+th, td {
+    border: 1px solid #9b9898;
+    width:fit-content;
+    /*padding: 8px;*/
+    text-align: center;
+    
+}
+.empty{
+    border:none;
+    background-color: transparent;
+}
+
+th {
+    background-color: #DAC0A3;
+    color:#102C57;
+}
+#profdispo{
+    background-color: #102C57;
+    color:#EADBC8;
+    font-size: large;
+}
+.jour{
+    background-color:#DAC0A3 ;
+    color:#102C57;
+    font-weight:600;
+    font-size:medium;
+}
+
+
+.split-header {
+    /*border-right: 1px solid #000;*/
+    width: 45%; /* Set equal width for both headers */
+}
+
+/* To make sure the border does not appear on the last column */
+.split-header:last-child {
+    border-right: none;
+}
+.prof_dispo{
+    background-color:#f3ece4;
+    color:#102C57;
+    font-size: medium;
+    font-weight:700;
+    border-bottom: 1px solid #9b9898;
+}
+.profs{
+    display: block;
+    width:100%;
+    margin:0;
+    padding:0;
+}

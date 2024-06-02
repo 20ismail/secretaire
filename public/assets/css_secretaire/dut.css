@@ -1,0 +1,107 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #6f809a;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+#semesterSelect{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.searchBarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.searchBar {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+    flex: 1;
+    margin-right: 10px;
+}
+
+.searchBar input[type="text"],
+.searchBar select {
+    padding: 8px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.searchBar button {
+    padding: 8px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #102c57;
+    color: white;
+}
+
+#addModuleBtn {
+    padding: 8px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #102c57;
+    color: white;}
+
+
+
+.moduleContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.moduleBox {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    min-width: 300px;
+    max-width: 300px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    text-decoration: none; /* Removes default underline for links */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.moduleBox:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.actions i {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Font Awesome Icons */
+.fa-trash-alt,
+.fa-edit {
+    color: red;
+}

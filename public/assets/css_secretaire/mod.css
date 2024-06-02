@@ -1,0 +1,104 @@
+body {
+  font-family: Arial, sans-serif; /* Specify a preferred font */
+  background-color: #f0f2f5; /* Light background color */
+  margin: 0;
+  padding: 0;
+  }
+  
+  .container {
+    max-width: 1000px; /* Limit container width */
+    margin: 0 auto; /* Center content horizontally */
+    padding: 10px;
+  }
+  .header {
+    background-color: #EADBC8; /* Light gray background */
+    padding: 10px 0; /* Add some top and bottom padding */
+    z-index: 1;
+  }
+  
+  .header_module {
+    background-color:white; /* Light gray background */
+    padding: 10px 0;
+  display: flex; /* Arrange elements horizontally */
+  justify-content: space-between; /* Space elements evenly */
+  align-items: center; /* Align elements vertically */
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  }
+  .header_module h1 {
+    margin: 1;
+    font-size: 2em;
+    color: #333; /* Darker text color for heading */
+  }
+  
+  /*.header h1 {
+    margin: 0; /* Remove default heading margin 
+    font-size: 2em; /* Increase heading font size 
+  }*/
+  .containerMod{
+    display:inline;
+
+  }
+  
+  .navigation {
+    float: right; /* Float navigation to the right */
+    padding-left: 0px;
+    padding-top: 20px;
+
+  }
+  
+  .nav-list {
+    list-style: none; /* Remove default list style */
+    margin: 0; /* Remove default list margin */
+    padding: 0; /* Remove default list padding */
+  }
+  
+  .nav-item {
+    display: inline-block; /* Display navigation items inline */
+    margin-right: 20px; /* Add some margin between items */
+    
+  }
+  
+  .nav-item-upper {
+    display: inline-block; /* Display navigation items inline */
+    margin-right: 20px; /* Add some margin between items */
+    
+  }
+  .nav-item-upper a {
+    text-decoration: none; /* Remove default link underline */
+    color: #102C57; /* Darker text color for links */
+    font-weight: bold; /* Bold font weight for emphasis */
+  }
+  
+  .main {
+    padding-top: 40px;
+  }
+  
+  .card-container {
+    display:flex; /* Arrange cards horizontally */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    justify-content:space-around; /* Space cards evenly */
+  }
+  
+  .card {
+    width: 20%; /* Define card width */
+    height: 20%;
+    background-color: #EADBC8;
+    margin-bottom: 20px; /* Add spacing between cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle drop shadow */
+    border-radius: 5px; /* Rounded corners for cards */
+    text-align: center; /* Center content within cards */
+  }
+  .card:hover {
+    background-color: #d3C3ae;
+    border-color: #999;
+  }
+  .imgma{
+    width:300px;
+    height:150px;
+  }
+  .footer{
+    padding: 10px 0; /* Add some top and bottom padding */
+    z-index: 1;
+    
+  }
+  

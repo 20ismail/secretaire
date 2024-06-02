@@ -1,0 +1,198 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+.page-content{
+    padding:20px;
+}
+
+.header {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 150px;
+}
+
+.title {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #333;
+}
+
+.welcome {
+    font-style: italic;
+    color: #666;
+}
+
+.nav-bar {
+    background-color: #102C57;
+    padding: 10px;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-item {
+    margin-right: 25px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-item:active a {
+    background-color:whitesmoke ;
+}
+
+.main {
+    padding: 20px;
+      
+}
+
+
+
+.box {
+    /*flex: 1 0 30%; /* Define box width and minimum width */
+    width:fit-content;
+    margin: 5px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text within boxes */
+}
+
+.box h2 {
+    margin-bottom: 10px;
+    color: #333;
+   
+}
+
+.edt-container {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color:#EADBC8;
+}
+
+.edt-container h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Optional styles for content within boxes (you can customize this) */
+
+.box p { /* Add styles for any paragraph text within boxes */
+    color: #666;
+}
+
+.box ul { /* Add styles for any unordered lists within boxes */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.box ul li {
+    margin-bottom: 5px;
+}
+.btn {
+    background-color: #DAC0A3; /* Button background color */
+    color: #333; /* Text color for better contrast */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Add rounded corners */
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-weight: bold; /* Make text bold for emphasis */
+    cursor: pointer; /* Indicate clickable behavior */
+  }
+  .header{
+    background-color: #EADBC8;
+  }
+  .boxes-container {
+    display: inline-block;
+    flex-wrap: wrap; /* Allow boxes to wrap to next line */
+    margin-bottom: 20px;
+    
+  }
+  
+  .box {
+     width:fit-content;/* Define box width and minimum width */
+    margin: 5px;
+    padding: 20px;
+    border-radius: 5px;
+    
+    /* Remove the image element from within the box */
+  }
+  
+  .box h2 {
+    margin-bottom: 10px; /* Adjust spacing as needed */
+    color: #fff; /* Text color for better contrast over image */
+  }
+  
+  /* Use CSS background properties to set the image */
+  .box_module {
+    background-image: url("img/ca.jpeg");
+    background-position: center;
+  }
+  .box_module hover{
+    box-shadow: #666;
+
+  }
+  .boxes-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow boxes to wrap to next line */
+    margin-bottom: 20px;
+  }
+  
+  .box_module {
+    width: 250px; /* Adjusted width */
+    height: 250px; /* Adjusted height */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange items in a column */
+    align-items: center; /* Center items horizontally */
+    overflow: hidden; /* Hide overflow content */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+.box_module .img {
+    width: auto; /* Auto width to fit within box */
+    max-width: 200%; /* Ensure the image fits within the box */
+    max-height: 70%; /* Set maximum height for the image */
+    object-fit: contain; /* Maintain aspect ratio while fitting */
+}
+
+.box_module h2 {
+    margin: 5px 0 0; /* Adjust margin to separate text from image */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow effect for text */
+}
+.content-header{
+        background-color:#102c57;
+        color:whitesmoke;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        font-size:large;
+        font-weight:bold;
+        border-radius: 2px;
+        
+          
+}
