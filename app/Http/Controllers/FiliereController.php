@@ -50,19 +50,6 @@ class FiliereController extends Controller
     {
         // Logic for deleting a specific filiere
     }
-    public function showDropdowns()
-    {
-        $fillieres = Filiere::join('departements', 'fillieres.departement_id', '=', 'departements.id')
-            ->join('secretaires', 'secretaires.departement_id', '=', 'departements.id')
-            ->select('fillieres.intitule_filliere')
-            ->distinct()
-            ->get();
-
-        $semestres = Semestre::select('numero_semestre')
-            ->distinct()
-            ->get();
-
-        return view('Secretaire.Filiere', ['fillieres' => $fillieres, 'semestres' => $semestres]);
-    }
+   
 }
 

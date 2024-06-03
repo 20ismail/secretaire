@@ -1,22 +1,23 @@
-  <!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-	  <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>ESTS</title>
 	    <!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="{{asset('assets\css_secretaire\style.css')}}">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+	    <!----css3---->
+        <link rel="stylesheet" href="{{asset('assets\css_secretaire\style.css')}}">
 		<link rel="stylesheet" href="{{asset('assets\css_secretaire\sub.css')}}">
 		<link rel="stylesheet" href="{{asset('assets\css_secretaire\custom.css')}}">
 		<link rel="stylesheet" href="{{asset('assets\css_secretaire\bootstrap.min.css')}}">
 		<link rel="stylesheet" href="{{asset('assets\css_secretaire\sec.css')}}">
-		<link rel="stylesheet" href="{{asset('assets\css_secretaire\mod.css')}}">
-		<link rel="stylesheet" href="{{asset('assets\css_secretaire\salle.css')}}">
-      
-		
+		<link rel="stylesheet" href="{{asset('assets\css_secretaire\dut.css')}}">
+	    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 		
 		<!--google fonts -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -27,8 +28,6 @@
 	
 	   <!--google material icon-->
       <link href="https://fonts.googleapis.com/css2?family=Material+Icons"rel="stylesheet">
-	  <!--ajax link-->
-	  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   </head>
   <body>
@@ -115,6 +114,8 @@
 	 
    <!-------sidebar--design- close----------->
    
+   
+   
       <!-------page-content start----------->
    
       <div id="content">
@@ -150,7 +151,7 @@
 					     <div class="xp-profilebar text-right">
 						    <nav class="navbar p-0">
 							   <ul class="nav navbar-nav flex-row ml-auto">
-							   <li class="dropdown nav-item ">
+							   <li class="dropdown nav-item active">
 							     <a class="nav-link" href="#" data-toggle="dropdown">
 								  <span class="material-icons">notifications</span>
 								  <span class="notification">4</span>
@@ -203,133 +204,59 @@
 				 
 			 </div>
 		  </div>
-		  <!--content start-->
-
-		  <div class="page-content">
-		  <div class="Salle_header">
-		  	<h2 class="SalleTitle">Entrez disponnibilité de vos salles:</h2>
-        </div>
-		  <form id="salle-form">
-		  
-    <label for="jours">Jours:</label>
-    <select id="jours" name="jours">
-        <option value="">Selectionner un jours</option>
-        <option value="monday">Lundi</option>
-        <option value="tuesday">Mardi</option>
-		<option value="monday">Mercredi</option>
-        <option value="tuesday">Jeudi</option>
-		<option value="monday">Vendredi</option>
-        <option value="tuesday">Samedi</option>
-		<option value="monday">Dimanche</option>
-
-        <!-- Add other days as needed -->
-    </select>
-    <br>
-	<hr>
-
-	<label>Temps:</label> 
-    <br>
-    <input type="radio" id="morning" name="time" value="morning">
-    <label for="morning">Matin</label>
-    
-    <input type="radio" id="afternoon" name="time" value="afternoon">
-    <label for="afternoon">Après-midi</label>
-    <br>
-
-   <hr>
-    <label>Type Salle:</label> 
-    <div class="type-salle-option">
-        <input type="checkbox" id="amphi" name="type_salle" value="amphi">
-        <label for="amphi">Amphi</label>
-        <div class="sub-options" id="sub-options-amphi"></div>
-    </div>
-    <div class="type-salle-option">
-        <input type="checkbox" id="mini_amphi" name="type_salle" value="mini_amphi">
-        <label for="mini_amphi">Mini-Amphi</label>
-        <div class="sub-options" id="sub-options-mini_amphi"></div>
-    </div>
-    <div class="type-salle-option">
-        <input type="checkbox" id="salle_td" name="type_salle" value="salle_td">
-        <label for="salle_td">Salle de TD</label>
-        <div class="sub-options" id="sub-options-salle_td"></div>
-    </div>
-    <div class="type-salle-option">
-        <input type="checkbox" id="salle_tp" name="type_salle" value="salle_tp">
-        <label for="salle_tp">Salle de TP</label>
-        <div class="sub-options" id="sub-options-salle_tp"></div>
-    </div>
-	<div class="button-container">
-        <button type="submit">Enregistrer</button>
-    </div>
-
-   
-</form>
-</div>  
-              	
+          
+          <!--content start -->
+          <header class="header">
+             <h2>Intitule module</h2>
+          </header>
+          <span> Responsable:Mme Ilham Mounir</span>
+           
+          <div class="composant-module">
+             <h1>Cours:</h1>
+             <span class="infoMod">Total heures:</span>
+             <span class="infoMod">Groupes:</span>
+             <table class="Groupes">
+                <thead>
+                    <th> Numero groupe</th>
+                    <th>Enseignant chargé</th>
+                </thead>
 
 
-	<script src="{{asset('assets\js_secretaire\jquery-3.3.1.slim.min.js')}}"></script>
+          </div>
+
+       
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="{{asset('assets\js_secretaire\jquery-3.3.1.slim.min.js')}}"></script>
    <script src="{{asset('assets\js_secretaire\popper.min.js')}}"></script>
    <script src="{{asset('assets\js_secretaire\bootstrap.min.js')}}"></script>
    <script src="{{asset('assets\js_secretaire\jquery-3.3.1.min.js')}}"></script>
    <script src="{{asset('assets\js_secretaire\fun.js')}}"></script>
    <script src="{{asset('assets\js_secretaire\style.js')}}"></script>
-   <script src="{{asset('assets\js_secretaire\salle.js')}}"></script>
-   <script src="{{asset('assets\js_secretaire\soo.js')}}"></script>
-   <script src="{{asset('assets\js_secretaire\enre.js')}}"></script>
-   
 
-
-		
-        
-        
-        <script type="text/javascript">
-            $(document).ready(function(){
-               $(".xp-menubar").on('click',function(){
-                 $("#sidebar").toggleClass('active');
-                 $("#content").toggleClass('active');
-               });
-               
-               $('.xp-menubar,.body-overlay').on('click',function(){
-                  $("#sidebar,.body-overlay").toggleClass('show-nav');
-               });
-               
-            });
-			
-			const typeSalleOptions = {
-        amphi: ['Sub-option 1 for Amphi', 'Sub-option 2 for Amphi'],
-        mini_amphi: ['Sub-option 1 for Mini-Amphi', 'Sub-option 2 for Mini-Amphi'],
-        salle_td: ['Sub-option 1 for Salle de TD', 'Sub-option 2 for Salle de TD'],
-        salle_tp: ['Sub-option 1 for Salle de TP', 'Sub-option 2 for Salle de TP']
-    };
-
-    document.querySelectorAll('input[name="type_salle"]').forEach((checkbox) => {
-        checkbox.addEventListener('change', handleCheckboxChange);
-    });
-
-    function handleCheckboxChange(event) {
-        const checkbox = event.target;
-        const subOptionsContainer = document.getElementById(`sub-options-${checkbox.value}`);
-        subOptionsContainer.innerHTML = '';
-
-        if (checkbox.checked) {
-            const subOptions = typeSalleOptions[checkbox.value];
-            subOptions.forEach(option => {
-                const div = document.createElement('div');
-                div.innerHTML = `
-                    <input type="checkbox" id="${option}" name="${checkbox.value}_options" value="${option}">
-                    <label for="${option}">${option}</label>
-                `;
-                subOptionsContainer.appendChild(div);
-            });
-            subOptionsContainer.style.display = 'block';
-        } else {
-            subOptionsContainer.style.display = 'none';
-        }
-    }
-    
+<script type="text/javascript">
+	$(document).ready(function(){
+	   $(".xp-menubar").on('click',function(){
+		 $("#sidebar").toggleClass('active');
+		 $("#content").toggleClass('active');
+	   });
+	   
+	   $('.xp-menubar,.body-overlay').on('click',function(){
+		  $("#sidebar,.body-overlay").toggleClass('show-nav');
+	   });
+	   
+	});
 </script>
-		
-
- </body>
- </html>
+</body>
+</html>

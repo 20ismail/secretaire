@@ -38,7 +38,10 @@ body {
     color: #102C57;
     font-weight: bold;
   }
-
+  .dropdown select option {
+    background-color: #ffffff; /* Ensure background is white */
+    color: #000000; /* Ensure text is black */
+}
 
 .filiere-container {
     display: inline-block;
