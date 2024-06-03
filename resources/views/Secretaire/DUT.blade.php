@@ -226,7 +226,7 @@
         
         
         <div class="moduleContainer">
-            <a href="module1.html" class="moduleBox" style="background-image: url('ima.jpg');">
+            <a href="{{ route('infomod') }}" class="moduleBox" style="background-image: url('ima.jpg');">
                 Module 1
                 <div class="actions">
                     <i class="fas fa-trash-alt"></i>

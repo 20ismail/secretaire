@@ -14,7 +14,7 @@
 		<link rel="stylesheet" href="{{asset('assets\css_secretaire\custom.css')}}">
 		<link rel="stylesheet" href="{{asset('assets\css_secretaire\bootstrap.min.css')}}">
 		<link rel="stylesheet" href="{{asset('assets\css_secretaire\sec.css')}}">
-		<link rel="stylesheet" href="{{asset('assets\css_secretaire\dut.css')}}">
+		<link rel="stylesheet" href="{{asset('assets\css_secretaire\infoMod.css')}}">
 	    <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -206,10 +206,10 @@
 		  </div>
           
           <!--content start -->
-          <header class="header">
-             <h2>Intitule module</h2>
-          </header>
-          <span> Responsable:Mme Ilham Mounir</span>
+          <div id="moduleheader">
+             <h2 id="Module">Intitule module</h2>
+            <span class="infoMod"> Responsable:Mme Ilham Mounir</span>
+          </div>
            
           <div class="composant-module">
              <h1>Cours:</h1>
@@ -220,9 +220,75 @@
                     <th> Numero groupe</th>
                     <th>Enseignant chargé</th>
                 </thead>
-
+                <tbody>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </tbody> 
+            </table>
+          </div>
+          <div class="composant-module">
+             <h1>TD:</h1>
+             <span class="infoMod">Total heures:</span>
+             <span class="infoMod">Groupes:</span>
+             <table class="Groupes">
+                <thead>
+                    <th> Numero groupe</th>
+                    <th>Enseignant chargé</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </tbody> 
+            </table>
 
           </div>
+          <div class="composant-module">
+             <h1>TP:</h1>
+             <span class="infoMod">Total heures:</span>
+             <span class="infoMod">Groupes:</span>
+             <table class="Groupes">
+                <thead>
+                    <th> Numero groupe</th>
+                    <th>Enseignant chargé</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </tbody> 
+            </table>
+
+          </div>
+
 
        
         

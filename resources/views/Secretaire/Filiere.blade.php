@@ -214,18 +214,18 @@
 		<div class="dropdown" id="select-filliere">
 			<label for="select-filliere">Filière:</label>
 			<select id="select-filliere">
-					@foreach ($fillieres as $filliere)
-						<option value="{{ $filliere->intitule_filliere }}">{{ $filliere->intitule_filliere }}</option>
-					@endforeach
-			</select>
+        @foreach ($fillieres as $filliere)
+            <option value="{{ $filliere->intitule_filliere }}">{{ $filliere->intitule_filliere }}</option>
+        @endforeach
+    </select>
 		</div>
         <div class="dropdown" id="select-semestre">
             <label for="select-semestre">Semestre:</label>
-            <select  id="select-semestre">
-				@foreach ($semestres as $semestre)
-                    <option value="{{ $semestre->numero_semestre }}">{{ $semestre->numero_semestre }}</option>
-                @endforeach
-			</select>
+			<select id="select-semestre">
+        @foreach ($semestres as $semestre)
+            <option value="{{ $semestre->numero_semestre }}">{{ $semestre->numero_semestre }}</option>
+        @endforeach
+    </select>
         </div>
     </div>
     
@@ -342,36 +342,20 @@ document.addEventListener('DOMContentLoaded', () => {
     updateNumber();
 });
 document.addEventListener('DOMContentLoaded', () => {
-    // Fetch and populate fillieres
-    fetch('/api/fillieres')
-        .then(response => response.json())
-        .then(data => {
-            console.log('Fillieres:', data); // Log the data
-            const filliereSelect = document.getElementById('select-filliere');
-            data.forEach(item => {
-                const option = document.createElement('option');
-                option.value = item.intitule_filliere;
-                option.textContent = item.intitule_filliere;
-                filliereSelect.appendChild(option);
-            });
-        })
-        .catch(error => console.error('Error fetching fillieres:', error));
+    // Get references to the dropdowns
+    const filliereSelect = document.getElementById('select-filliere');
+    const semestreSelect = document.getElementById('select-semestre');
 
-    // Fetch and populate semestres
-    fetch('/api/semestres')
-        .then(response => response.json())
-        .then(data => {
-            console.log('Semestres:', data); // Log the data
-            const semestreSelect = document.getElementById('select-semestre');
-            data.forEach(item => {
-                const option = document.createElement('option');
-                option.value = item.numero_semestre;
-                option.textContent = item.numero_semestre;
-                semestreSelect.appendChild(option);
-            });
-        })
-        .catch(error => console.error('Error fetching semestres:', error));
+    // Add event listeners to log selected values
+    filliereSelect.addEventListener('change', () => {
+        console.log('Selected filliere:', filliereSelect.value);
+    });
+
+    semestreSelect.addEventListener('change', () => {
+        console.log('Selected semestre:', semestreSelect.value);
+    });
 });
+
 
 
    </script>

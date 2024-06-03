@@ -41,6 +41,11 @@ Route::get('/Salle', function () {
     return view('Secretaire.Salle');
 })-> name ('secretaire.salle');
 
+
+Route::get('/infoMod', function () {
+    return view('Secretaire.infoMod');
+})->name('infomod');
+
 route::get('/filiere',[FiliereController::class,'index'])-> name ('secretaire.filiere');
 //filiere
 // Route::get('/filiere', function () {
