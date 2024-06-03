@@ -58,12 +58,15 @@ margin-bottom: 15px;
 font-weight: bold;
 }
 .sub-options {
-margin-left: 20px;
+  margin-left: 20px;
+  margin-top: 10px;
+  display: none; /* Initially hide sub-options */
 }
-.sub-options label {
-font-weight:normal;
-color: #555;
 
+.sub-options label {
+  font-weight: normal;
+  display: inline-block;
+  margin-left: 10px;
 }
 .button-container {
 text-align: center;

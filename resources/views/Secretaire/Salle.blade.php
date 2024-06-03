@@ -237,26 +237,51 @@
     <br>
 
    <hr>
-    <label>Type Salle:</label> 
+   <label>Type Salle:</label>
+    <br>
     <div class="type-salle-option">
         <input type="checkbox" id="amphi" name="type_salle" value="amphi">
         <label for="amphi">Amphi</label>
-        <div class="sub-options" id="sub-options-amphi"></div>
+        <div class="sub-options" id="sub-options-amphi">
+            <input type="checkbox" id="amphi-option1" name="amphi_options" value="Sub-option 1 for Amphi">
+            <label for="amphi-option1">Sub-option 1 for Amphi</label>
+            <br>
+            <input type="checkbox" id="amphi-option2" name="amphi_options" value="Sub-option 2 for Amphi">
+            <label for="amphi-option2">Sub-option 2 for Amphi</label>
+        </div>
     </div>
     <div class="type-salle-option">
         <input type="checkbox" id="mini_amphi" name="type_salle" value="mini_amphi">
         <label for="mini_amphi">Mini-Amphi</label>
-        <div class="sub-options" id="sub-options-mini_amphi"></div>
+        <div class="sub-options" id="sub-options-mini_amphi">
+            <input type="checkbox" id="mini-amphi-option1" name="mini_amphi_options" value="Sub-option 1 for Mini-Amphi">
+            <label for="mini-amphi-option1">Sub-option 1 for Mini-Amphi</label>
+            <br>
+            <input type="checkbox" id="mini-amphi-option2" name="mini_amphi_options" value="Sub-option 2 for Mini-Amphi">
+            <label for="mini-amphi-option2">Sub-option 2 for Mini-Amphi</label>
+        </div>
     </div>
     <div class="type-salle-option">
         <input type="checkbox" id="salle_td" name="type_salle" value="salle_td">
         <label for="salle_td">Salle de TD</label>
-        <div class="sub-options" id="sub-options-salle_td"></div>
+        <div class="sub-options" id="sub-options-salle_td">
+            <input type="checkbox" id="salle-td-option1" name="salle_td_options" value="Sub-option 1 for Salle de TD">
+            <label for="salle-td-option1">Sub-option 1 for Salle de TD</label>
+            <br>
+            <input type="checkbox" id="salle-td-option2" name="salle_td_options" value="Sub-option 2 for Salle de TD">
+            <label for="salle-td-option2">Sub-option 2 for Salle de TD</label>
+        </div>
     </div>
     <div class="type-salle-option">
         <input type="checkbox" id="salle_tp" name="type_salle" value="salle_tp">
         <label for="salle_tp">Salle de TP</label>
-        <div class="sub-options" id="sub-options-salle_tp"></div>
+        <div class="sub-options" id="sub-options-salle_tp">
+            <input type="checkbox" id="salle-tp-option1" name="salle_tp_options" value="Sub-option 1 for Salle de TP">
+            <label for="salle-tp-option1">Sub-option 1 for Salle de TP</label>
+            <br>
+            <input type="checkbox" id="salle-tp-option2" name="salle_tp_options" value="Sub-option 2 for Salle de TP">
+            <label for="salle-tp-option2">Sub-option 2 for Salle de TP</label>
+        </div>
     </div>
 	<div class="button-container">
         <button type="submit">Enregistrer</button>
@@ -296,36 +321,14 @@
                
             });
 			
-			const typeSalleOptions = {
-        amphi: ['Sub-option 1 for Amphi', 'Sub-option 2 for Amphi'],
-        mini_amphi: ['Sub-option 1 for Mini-Amphi', 'Sub-option 2 for Mini-Amphi'],
-        salle_td: ['Sub-option 1 for Salle de TD', 'Sub-option 2 for Salle de TD'],
-        salle_tp: ['Sub-option 1 for Salle de TP', 'Sub-option 2 for Salle de TP']
-    };
-
-    document.querySelectorAll('input[name="type_salle"]').forEach((checkbox) => {
+			document.querySelectorAll('input[name="type_salle"]').forEach((checkbox) => {
         checkbox.addEventListener('change', handleCheckboxChange);
     });
 
     function handleCheckboxChange(event) {
         const checkbox = event.target;
         const subOptionsContainer = document.getElementById(`sub-options-${checkbox.value}`);
-        subOptionsContainer.innerHTML = '';
-
-        if (checkbox.checked) {
-            const subOptions = typeSalleOptions[checkbox.value];
-            subOptions.forEach(option => {
-                const div = document.createElement('div');
-                div.innerHTML = `
-                    <input type="checkbox" id="${option}" name="${checkbox.value}_options" value="${option}">
-                    <label for="${option}">${option}</label>
-                `;
-                subOptionsContainer.appendChild(div);
-            });
-            subOptionsContainer.style.display = 'block';
-        } else {
-            subOptionsContainer.style.display = 'none';
-        }
+        subOptionsContainer.style.display = checkbox.checked ? 'block' : 'none';
     }
     
 </script>
