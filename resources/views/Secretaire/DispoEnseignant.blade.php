@@ -1,11 +1,4 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-        <title>ESTS</title>
+<x-dashboardSec>
 	    <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="css/bootstrap.min.css">
 	    <!----css3---->
@@ -39,6 +32,7 @@
 	   <!--google material icon-->
       <link href="https://fonts.googleapis.com/css2?family=Material+Icons"rel="stylesheet">
 
+<<<<<<< HEAD
 	
 	
 	  
@@ -232,6 +226,32 @@
     @endif
 	<div class="content-header">
 		<p>Dispo Enseignants: </p>
+=======
+  
+
+
+    <!--content start-->
+	<div class="page-content">
+    <div class="dropdowncontainer">
+        <div class="dropdown">
+            <label for="cycle">Cycle:</label>
+            <select id="cycle">
+                <option value="DUT">DUT</option>
+                <option value="LP">LP</option>
+                <option value="MASTER">MASTER</option>
+            </select>
+        </div>
+        <div class="dropdown">
+            <label for="semestre">Semestre:</label>
+            <select id="semestre">
+                <option value="S1">S1</option>
+                <option value="S2">S2</option>
+                <option value="S3">S3</option>
+                <option value="S4">S4</option>
+            </select>
+        </div>
+        
+>>>>>>> 276ca26a9b223f1bea04d36cda1932c57b2af986
     </div>
 
 
@@ -310,6 +330,7 @@
 				   });
 				   ///////////
 
+<<<<<<< HEAD
 				   document.getElementById('select-semestre').addEventListener('change', function() {
             const selectedSemestre = this.value;
             const rows = document.querySelectorAll('.dispo-row');
@@ -329,3 +350,6 @@
  </body>
  
  </html>
+=======
+</x-dashboardSec>
+>>>>>>> 276ca26a9b223f1bea04d36cda1932c57b2af986

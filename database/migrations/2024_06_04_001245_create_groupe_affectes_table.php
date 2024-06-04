@@ -15,13 +15,11 @@ return new class extends Migration
             $table->id();
             $table->integer('numeroGroupe')->nullable();
             $table->integer('nbrEtudiants')->nullable();
-            $table->foreignId('idComposant')->constrained('composants')->onDelete('cascade');
+            $table->foreignId('idComposant')->constrained('composents')->onDelete('cascade');
             $table->foreignId('idProfesseur')->constrained('professeurs')->onDelete('cascade');
             $table->foreignId('idFiliere')->constrained('filieres')->onDelete('cascade');
             // $table->foreignId('idSemestre')->constrained('semestres')->onDelete('cascade');
             $table->timestamps();
-    
-            
         });
     }
 
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('groupe_affectes');
+        Schema::dropIfExists('groupe_affectes_');
     }
 };
