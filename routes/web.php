@@ -1,10 +1,11 @@
 <?php
 
+use App\Http\Controllers\ComposentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 
 use App\Http\Controllers\FiliereController;
-
+use App\Http\Controllers\SalleDispoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +17,8 @@ use App\Http\Controllers\FiliereController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+route::resource('composents',ComposentController::class);
+route::resource('salleDispos',SalleDispoController::class);
 Route::get('/', function () {
     return view('Secretaire.index');
 }) -> name ('secretaire.index');
@@ -87,7 +89,7 @@ Route::get('/get-salle-options', 'SalleController@getSalleOptions');
 
 
 
-use App\Http\Controllers\SalleDispoController;
+
 /*
 Route::get('/', function () {
     return view('Salle');

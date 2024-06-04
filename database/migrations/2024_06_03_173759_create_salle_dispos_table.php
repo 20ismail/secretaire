@@ -19,6 +19,9 @@ return new class extends Migration
             $table->boolean('apres_midi')->nullable();
             $table->unsignedBigInteger('idSecretaire');
             $table->foreign('idSecretaire')->references('id')->on('secretaires')->onDelete('cascade');
+            $table->string('numero')->nullable();
+            $table->string('TypeSalle')->nullable();;
+            $table->timestamps();
         });
     }
 

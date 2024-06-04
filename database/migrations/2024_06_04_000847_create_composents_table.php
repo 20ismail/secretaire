@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('composants', function (Blueprint $table) {
+        Schema::create('composents', function (Blueprint $table) {
             $table->id();
             $table->string('intitule')->nullable();
             $table->integer('nbr_groupes')->nullable();
@@ -20,6 +20,7 @@ return new class extends Migration
             $table->unsignedBigInteger('idsemestre')->nullable();
             $table->foreign('idsemestre')->references('id')->on('semestres')->onDelete('cascade');
             $table->timestamps();
+            
         });
     }
 
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('composants');
+        Schema::dropIfExists('composents_');
     }
 };
