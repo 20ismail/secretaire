@@ -21,27 +21,28 @@ body {
     display: inline-block;
     flex-direction: column;
     gap: 10px;
-  }
-  
-  .dropdown label {
-    
+}
+
+.dropdown label {
     color: #102C57;
     font-weight: bold;
-  }
-  
-  .dropdown select {
-    width: max-content;
+}
+
+.dropdown select {
+    width: auto; /* Changed from max-content to auto for better compatibility */
     padding: 10px;
     border: 1px solid #102C57;
     border-radius: 5px;
     background-color: #f3ece4;
     color: #102C57;
     font-weight: bold;
-  }
-  .dropdown select option {
+}
+
+.dropdown select option {
     background-color: #ffffff; /* Ensure background is white */
     color: #000000; /* Ensure text is black */
 }
+
 
 .filiere-container {
     display: inline-block;

@@ -16,6 +16,9 @@ class Module extends Model
     {
         return $this->belongsTo(Professeur::class, 'idProf');
     }
+    protected $table = 'modules';
+
+    
 }
 
 

@@ -211,21 +211,24 @@
     <!--content start-->
 	<div class="page-content">
     <div class="dropdowncontainer">
-		<div class="dropdown" id="select-filliere">
+		<div class="dropdown" >
 			<label for="select-filliere">Filière:</label>
 			<select id="select-filliere">
-        @foreach ($fillieres as $filliere)
-            <option value="{{ $filliere->intitule_filliere }}">{{ $filliere->intitule_filliere }}</option>
-        @endforeach
-    </select>
+			<option value="genie info">genie info</option>
+				<!--
+				@foreach ($fillieres as $filliere)
+					<option value="{{ $filliere->intitule_filliere }}">{{ $filliere->intitule_filliere }}</option>
+				@endforeach
+-->
+    		</select>
 		</div>
-        <div class="dropdown" id="select-semestre">
+        <div class="dropdown">
             <label for="select-semestre">Semestre:</label>
 			<select id="select-semestre">
-        @foreach ($semestres as $semestre)
-            <option value="{{ $semestre->numero_semestre }}">{{ $semestre->numero_semestre }}</option>
-        @endforeach
-    </select>
+					@foreach ($semestres as $semestre)
+						<option value="{{ $semestre->numero_semestre }}">{{ $semestre->numero_semestre }}</option>
+					@endforeach
+    		</select>
         </div>
     </div>
     
@@ -311,7 +314,8 @@
 	
    
    
-   <script type="text/javascript">
+   <script type="text/javascript"> 
+
 		$(document).ready(function(){
 		   $(".xp-menubar").on('click',function(){
 			 $("#sidebar").toggleClass('active');
@@ -341,21 +345,22 @@ function decrement(elementId) {
 document.addEventListener('DOMContentLoaded', () => {
     updateNumber();
 });
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Get references to the dropdowns
-    const filliereSelect = document.getElementById('select-filliere');
-    const semestreSelect = document.getElementById('select-semestre');
+            // Event listener for fillieres dropdown
+            const filliereSelect = document.getElementById('select-filliere');
+            filliereSelect.addEventListener('change', () => {
+                const selectedFilliere = filliereSelect.value;
+                console.log('Selected filliere:', selectedFilliere);
+            });
 
-    // Add event listeners to log selected values
-    filliereSelect.addEventListener('change', () => {
-        console.log('Selected filliere:', filliereSelect.value);
-    });
-
-    semestreSelect.addEventListener('change', () => {
-        console.log('Selected semestre:', semestreSelect.value);
-    });
-});
-
+            // Event listener for semestres dropdown
+            const semestreSelect = document.getElementById('select-semestre');
+            semestreSelect.addEventListener('change', () => {
+                const selectedSemestre = semestreSelect.value;
+                console.log('Selected semestre:', selectedSemestre);
+            });
+        });
 
 
    </script>

@@ -6,11 +6,13 @@ use App\Models\Semestre;
 
 class SemestreController extends Controller
 {
-    public function getSemestres()
+    public function index()
     {
-        return Semestre::select('numero_semestre')
+        $semestres = Semestre::select('numeroSemestre')
             ->distinct()
             ->get();
+
+        return view('Secretaire.DispoEnseignant', compact('semestres'));
     }
 }
 

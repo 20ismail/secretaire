@@ -80,14 +80,8 @@ th {
 .split-header:last-child {
     border-right: none;
 }
-.prof_dispo{
-    background-color:#f3ece4;
-    color:#102C57;
-    font-size: medium;
-    font-weight:700;
-    border-bottom: 1px solid #9b9898;
-}
-.profs{
+
+.profs-dispo{
     display: block;
     width:100%;
     margin:0;

@@ -61,10 +61,11 @@ Route::get('/InfoEnseignant', function () {
     return view('Secretaire.InfoEnseignant');
 })-> name ('secretaire.infoenseignant');
 */
-//DispoEnseignant  
+/*DispoEnseignant  
 Route::get('/DispoEnseignant', function () {
     return view('Secretaire.DispoEnseignant');
 })-> name ('secretaire.dispoenseignant');
+*/
 //login
 Route::get('/login', function () {
     return view('Secretaire.login');
@@ -130,8 +131,13 @@ Route::middleware(['auth'])->group(function () {
     
 });
 
-
+/*
 use App\Http\Controllers\SemestreController;
 
 // Route::get('/Filiere', [FilliereController::class, 'getFillieres']);
-// Route::get('/Filiere', [SemestreController::class, 'getSemestres']);
+Route::get('/DispoEnseignant', [SemestreController::class, 'index'])->name('secretaire.dispoenseignant');
+*/
+use App\Http\Controllers\DisponibiliteProfController;
+
+Route::get('/DispoEnseignant', [DisponibiliteProfController::class, 'index'])->name('secretaire.dispoenseignant');
+Route::post('/DispoEnseignant', [DisponibiliteProfController::class, 'index']);

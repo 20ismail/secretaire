@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class DisponibiliteProf extends Model
 {
-    use HasFactory;
+    protected $table = 'disponibilite_prof';
+
+    public function professeur()
+    {
+        return $this->belongsTo(Professeur::class, 'id_prof');
+    }
 }
