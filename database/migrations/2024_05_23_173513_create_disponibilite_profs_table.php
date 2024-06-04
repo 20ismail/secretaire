@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('disponibilite_profs', function (Blueprint $table) {
             $table->id();
-            $table->date('jour')->nullable();
+            $table->string('jour')->nullable();
             $table->boolean('matin')->nullable();
             $table->boolean('apres_midi')->nullable();
             $table->unsignedBigInteger('id_prof'); // Ajout de nullable

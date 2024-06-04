@@ -38,7 +38,7 @@
         
         
         <div class="moduleContainer">
-            <a href="module1.html" class="moduleBox" style="background-image: url('ima.jpg');">
+            <a href="Secretaire/infoMod" class="moduleBox" style="background-image: url('ima.jpg');">
                 Module 1
                 <div class="actions">
                     <i class="fas fa-trash-alt"></i>
@@ -85,19 +85,7 @@
             <!-- Add more module boxes here -->
         </div>
         
-       
-        
-
-
-
-
-
-
-
-
-
-
-
+   
 
 <script src="{{asset('assets\js_secretaire\jquery-3.3.1.slim.min.js')}}"></script>
    <script src="{{asset('assets\js_secretaire\popper.min.js')}}"></script>
