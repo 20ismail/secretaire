@@ -12,6 +12,6 @@ class Secretaire extends Authenticatable
 
     public function department()
     {
-        return $this->belongsTo(Departement::class, 'department', 'intitule');
+        return $this->belongsTo(Departement::class, 'departement', 'intitule');
     }
 }

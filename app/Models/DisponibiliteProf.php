@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class DisponibiliteProf extends Model
 {
-    protected $table = 'disponibilite_prof';
+    protected $table = 'disponibilite_profs';
 
     public function professeur()
     {

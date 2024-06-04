@@ -11,12 +11,12 @@ class Departement extends Model
 
     public function professeurs()
     {
-        return $this->hasMany(Professeur::class, 'id_department');
+        return $this->hasMany(Professeur::class, 'id_departement');
     }
 
     public function secretaires()
     {
-        return $this->hasMany(Secretaire::class, 'department', 'intitule');
+        return $this->hasMany(Secretaire::class, 'departement', 'intitule');
     }
 }
 

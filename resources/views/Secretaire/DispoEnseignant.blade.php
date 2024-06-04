@@ -261,7 +261,7 @@
             <select id="select-semestre">
                 <option value="">-- Sélectionner un semestre --</option>
                 @foreach ($semestres as $semestre)
-                    <option value="{{ $semestre->numero_semestre }}" {{ isset($selectedSemestre) && $selectedSemestre == $semestre->numero_semestre ? 'selected' : '' }}>
+                    <option value="{{ $semestre->numero_semestre }}">
                         {{ $semestre->numero_semestre }}
                     </option>
                 @endforeach
@@ -277,26 +277,22 @@
                 <th>Jour</th>
                 <th>Matin</th>
                 <th>Après-Midi</th>
+                <th>Semestre</th>
             </tr>
         </thead>
         <tbody>
-            @if($selectedSemestre)
-                @foreach ($disponibilites as $dispo)
-                    <tr>
-                        <td>{{ $dispo->professeur->nom }}</td>
-                        <td>{{ $dispo->professeur->prenom }}</td>
-                        <td>{{ $dispo->jour }}</td>
-                        <td>{{ $dispo->matin ? 'Oui' : 'Non' }}</td>
-                        <td>{{ $dispo->apres_midi ? 'Oui' : 'Non' }}</td>
-                    </tr>
-                @endforeach
-            @else
-                <tr>
-                    <td colspan="5">Veuillez sélectionner un semestre pour voir la disponibilité des enseignants.</td>
-                @endif
-            </tbody>
-        </table>
-		 
+            @foreach ($disponibilites as $dispo)
+                <tr class="dispo-row" data-semestre="{{ $dispo->semestre->numero_semestre }}">
+                    <td>{{ $dispo->professeur->nom }}</td>
+                    <td>{{ $dispo->professeur->prenom }}</td>
+                    <td>{{ $dispo->jour }}</td>
+                    <td>{{ $dispo->matin ? 'Oui' : 'Non' }}</td>
+                    <td>{{ $dispo->apres_midi ? 'Oui' : 'Non' }}</td>
+                    <td>{{ $dispo->semestre->numero_semestre }}</td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
 		
 		
 	
@@ -338,44 +334,17 @@
 </x-dashboardSec>
 =======
 				   document.getElementById('select-semestre').addEventListener('change', function() {
-                const selectedSemestre = this.value;
-                const tableBody = document.querySelector('#prof_table tbody');
-                tableBody.innerHTML = '';
+            const selectedSemestre = this.value;
+            const rows = document.querySelectorAll('.dispo-row');
 
-                @foreach ($disponibilites as $dispo)
-                    if (selectedSemestre == '{{ $dispo->semestre->numero_semestre }}') {
-                        const row = document.createElement('tr');
-                        const nomCell = document.createElement('td');
-                        const prenomCell = document.createElement('td');
-                        const jourCell = document.createElement('td');
-                        const matinCell = document.createElement('td');
-                        const apresMidiCell = document.createElement('td');
-
-                        nomCell.textContent = '{{ $dispo->professeur->nom }}';
-                        prenomCell.textContent = '{{ $dispo->professeur->prenom }}';
-                        jourCell.textContent = '{{ $dispo->jour }}';
-                        matinCell.textContent = '{{ $dispo->matin ? "Oui" : "Non" }}';
-                        apresMidiCell.textContent = '{{ $dispo->apres_midi ? "Oui" : "Non" }}';
-
-                        row.appendChild(nomCell);
-                        row.appendChild(prenomCell);
-                        row.appendChild(jourCell);
-                        row.appendChild(matinCell);
-                        row.appendChild(apresMidiCell);
-
-                        tableBody.appendChild(row);
-                    }
-                @endforeach
-
-                if (tableBody.innerHTML === '') {
-                    const row = document.createElement('tr');
-                    const noDataCell = document.createElement('td');
-                    noDataCell.colSpan = 5;
-                    noDataCell.textContent = 'Aucune disponibilité trouvée pour le semestre sélectionné.';
-                    row.appendChild(noDataCell);
-                    tableBody.appendChild(row);
+            rows.forEach(row => {
+                if (selectedSemestre === "" || row.dataset.semestre === selectedSemestre) {
+                    row.style.display = "";
+                } else {
+                    row.style.display = "none";
                 }
             });
+        });
     </script>
 			  
                    
