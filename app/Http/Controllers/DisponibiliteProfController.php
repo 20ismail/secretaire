@@ -22,29 +22,37 @@ class DisponibiliteProfController extends Controller
     // Handle form submission to get professor availability based on selected semester
     public function index(Request $request)
     {
-        // Fetch all semesters
-        $semestres = Semestre::all();
+        $selectedSemestre = $request->input('select-semestre');
+        $disponibilites = [];
 
         // Assuming you have the authenticated secretary
         $secretaire = auth()->user();
-        $departementIntitule = $secretaire->departement;
+        $departmentIntitule = $secretaire->departement;
 
-        // Fetch the department based on the secretary's department
-        $departement = Departement::where('intitule', $departementIntitule)->first();
+        // Retrieve the id_departement from the departement table
+        $departement = Departement::where('intitule', $departmentIntitule)->first();
+        $departmentId = $departement ? $departement->id : null;
 
-        if ($departement) {
-            // Fetch all availabilities for the department's professors
-            $disponibilites = DisponibiliteProf::whereHas('professeur', function($query) use ($departement) {
-                    $query->where('departement_id', $departement->id);
-                })
-                ->with(['professeur', 'semestre'])
-                ->get();
-        } else {
-            $disponibilites = [];
+        if ($selectedSemestre) {
+            $semestre = Semestre::where('numeroSemestre', $selectedSemestre)->first();
+            if ($semestre && $departmentId) {
+                $disponibilites = DisponibiliteProf::where('id_semestre', $semestre->id)
+                    ->whereHas('professeur', function($query) use ($departmentId) {
+                        $query->where('id_departement', $departmentId);
+                    })
+                    ->with(['professeur', 'semestre'])
+                    ->get();
+            }
         }
 
-        return view('Secretaire.DispoEnseignant', compact('semestres', 'disponibilites'));
+        $semestres = Semestre::all();
+        return view('Secretaire.DispoEnseignant', compact('semestres', 'selectedSemestre', 'disponibilites'));
     }
+
+    
+
+        
+    
 
     /**
      * Show the form for creating a new resource.

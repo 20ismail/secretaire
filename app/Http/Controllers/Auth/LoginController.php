@@ -64,7 +64,7 @@ class LoginController extends Controller
         // dd($credentials);
         if (Auth::attempt($credentials)) {
             // Authentication passed...
-            return redirect()->intended('/');
+            return redirect()->intended('/index');
                 
         }
 

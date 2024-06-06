@@ -43,8 +43,8 @@
 			  <h1>Enseignants</h1>
 			  <nav class="navigation">
 				<ul class="nav-list">
-				  <li class="nav-item-upper"><a href="DispoEnseignant.html">Disponiblités Enseignants</a></li>
-				  <li class="nav-item-upper"><a href="ModEnseigne.html">Informations d'enseignants</a></li>
+				  <li class="nav-item-upper"><a href="{{ route('secretaire.dispoenseignant') }}">Disponiblités Enseignants</a></li>
+				  <li class="nav-item-upper"><a href="{{ route('secretaire.infoenseignant') }}"secretaire.infoenseignant>Informations d'enseignants</a></li>
 				 
 				</ul>
 			  </nav>
@@ -56,12 +56,12 @@
 			  <div class="card-container">
 				<div class="card">
 				  <img class="card-image" src="{{asset('assets\img_secretaire\enseignant.jpg')}}" alt="DUT Image">
-				  <h4><li class="nav-item"><a href="DispoEnseignant.html">Disponiblités Enseignants</a></li></h4>
+				  <h4><li class="nav-item"><a href="{{ route('secretaire.dispoenseignant') }}">Disponiblités Enseignants</a></li></h4>
 				  
 				</div>
 				<div class="card">
 				  <img class="card-image" src="{{asset('assets\img_secretaire\enseignant.jpg')}}" alt="LP Image">
-				  <h4><li class="nav-item"><a href="ModEnseigne.html">Informations d'enseignants</a></li></h4>
+				  <h4><li class="nav-item"><a href="{{ route('secretaire.infoenseignant') }}">Informations d'enseignants</a></li></h4>
 				  
 				</div>
 				

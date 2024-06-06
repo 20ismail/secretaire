@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\FiliereController;
 use App\Http\Controllers\SalleDispoController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,7 +20,7 @@ use App\Http\Controllers\SalleDispoController;
 */
 route::resource('composents',ComposentController::class);
 route::resource('salleDispos',SalleDispoController::class);
-Route::get('/', function () {
+Route::get('/index', function () {
     return view('Secretaire.index');
 }) -> name ('secretaire.index');
 //module
@@ -68,14 +69,17 @@ Route::get('/DispoEnseignant', function () {
     return view('Secretaire.DispoEnseignant');
 })-> name ('secretaire.dispoenseignant');
 */
-//login
+/*login
 Route::get('/login', function () {
     return view('Secretaire.login');
 })-> name ('secretaire.login');
+*/
 
-Auth::routes();
+//Auth::routes();
+Route::get('/login', [App\Http\Controllers\Auth\LoginController::class, 'index'])->name('secretaire.login');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 Route::middleware('auth')->group(function () {
     'secretaire.index';
 });
@@ -139,7 +143,15 @@ use App\Http\Controllers\SemestreController;
 // Route::get('/Filiere', [FilliereController::class, 'getFillieres']);
 Route::get('/DispoEnseignant', [SemestreController::class, 'index'])->name('secretaire.dispoenseignant');
 */
+//DispoEnseignant
 use App\Http\Controllers\DisponibiliteProfController;
 
 Route::get('/DispoEnseignant', [DisponibiliteProfController::class, 'index'])->name('secretaire.dispoenseignant');
-Route::post('/DispoEnseignant', [DisponibiliteProfController::class, 'index']);
+Route::get('/profile', function () {
+    return view('Secretaire.profile');
+})-> name ('secretaire.profile');
+
+
+//secretaireprofile
+use App\Http\Controllers\SecretaireController;
+Route::put('/secretaire/{id}', [SecretaireController::class, 'update'])->name('secretaire.update');

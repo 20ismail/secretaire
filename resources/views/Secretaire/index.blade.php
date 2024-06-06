@@ -18,7 +18,7 @@
 		
 				<div class="box_module">
 					<img class="img" src="{{asset('assets\img_secretaire\ca.jpeg')}}" alt="">
-					<a href="{{ route('secretaire.salle') }}"><h2>Salles</h2></a>
+					<a href="{{ route('salleDispos.index') }}"><h2>Salles</h2></a>
 					
 				</div>
 		
@@ -28,7 +28,7 @@
 				</div>
 				<div class="box_module">
 					<img class="img" src="{{asset('assets\img_secretaire\ca.jpeg')}}"  alt="">
-					<a href="{{ route('secretaire.filiere') }}"><h2>Fillières</h2></a>
+					<a href="{{ route('secretaire.filiere') }}"><h2>Groupes</h2></a>
 				</div>
 			</div>
 			

@@ -65,9 +65,13 @@
 			<a  href="{{ route('secretaire.index') }}"  ><span  <i  class="fa-solid fa-house"></i>&nbsp;&nbsp;&nbsp;
 			</span>Home </a>
 			</li>
+			<li class="">
+                    <a href="{{route('secretaire.profile')}}" class="" id="homeLink"><span <i class="fas fa-solid fa-user-tie"></i></i>&nbsp;&nbsp;&nbsp;
+                    </span>Profile</a>
+                </li>
 			
 			  
-				<li>
+			<li>
 					<!-- Main section: Salle -->
 					{{-- <a href="{{ route('salleDispos.index') }}" >
 						<span><i class="fa-solid fas fa-school"></i>&nbsp;&nbsp;&nbsp;</span> 
@@ -81,9 +85,9 @@
 				<li>
 					<!-- Main section: Enseignant -->
 					{{-- <a href="{{ route('secretaire.enseignant') }}" class="dropdown-toggle">
-						<span><i class="fas fa-solid fa-user-tie"></i>&nbsp;&nbsp;&nbsp;</span> Enseignant
+						<span><i class="fa-solid fa-chalkboard-user"></i>&nbsp;&nbsp;&nbsp;</span> Enseignant
 					</a> --}}
-					<a href="{{ route('secretaire.enseignant') }}" class="dropdown-toggle" ><span  <i  class="fas fa-solid fa-user-tie"></i>&nbsp;&nbsp;&nbsp;
+					<a href="{{ route('secretaire.enseignant') }}" class="dropdown-toggle" ><span  <i class="fa-solid fa-chalkboard-user"></i>&nbsp;&nbsp;&nbsp;
 					</span>Enseignant</a>
 					<!-- Subsections for Enseignant -->
 					<ul class="sub-menu">
@@ -114,7 +118,7 @@
                     </span>Groupes </a>
                 </li>
 				<li class="">
-				  <a href="{{ route('login') }}" ><span <i class="fa-solid fa-right-from-bracket"></i>&nbsp;&nbsp;&nbsp;</span>Se déconnecter</a>
+				  <a href="{{ route('secretaire.login') }}" ><span <i class="fa-solid fa-right-from-bracket"></i>&nbsp;&nbsp;&nbsp;</span>Se déconnecter</a>
 				</li>
 			  </ul>
 		  

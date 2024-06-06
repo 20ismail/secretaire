@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('semestres', function (Blueprint $table) {
             $table->id();
-            $table->integer('numeroSemestre')->nullable();
+            $table->string('numeroSemestre')->nullable();
             $table->string('saison')->nullable();
             $table->integer('nbrSemaine')->nullable();
             $table->timestamps();

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('salle_ests', function (Blueprint $table) {
             $table->id();
             $table->string('TypeSalle')->nullable();
-            $table->integer('numero')->nullable();
+            $table->string('numero')->nullable();
             $table->foreignId('idAdministrateur')->constrained('administrateurs')->onDelete('cascade');
             $table->timestamps();
         });
