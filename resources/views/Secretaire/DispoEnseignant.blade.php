@@ -6,6 +6,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
+<<<<<<< HEAD
 .dropdowncontainer {
     background-color: #DAC0A3;
     width: 100%;
@@ -22,6 +23,39 @@ body {
     flex-direction: column;
     gap: 10px;
   }
+=======
+<<<<<<< HEAD
+  
+
+
+    <!--content start-->
+	<div class="page-content">
+    <div class="dropdowncontainer">
+        <div class="dropdown">
+            <label for="cycle">Cycle:</label>
+            <select id="cycle">
+                <option value="DUT">DUT</option>
+                <option value="LP">LP</option>
+                <option value="MASTER">MASTER</option>
+            </select>
+        </div>
+        <div class="dropdown">
+            <label for="semestre">Semestre:</label>
+            <select id="semestre">
+                <option value="S1">S1</option>
+                <option value="S2">S2</option>
+                <option value="S3">S3</option>
+                <option value="S4">S4</option>
+            </select>
+        </div>
+        
+=======
+	
+	
+	  
+  </head>
+  <body>
+>>>>>>> a59adc2abbcc43c9742eea8ee21246bfa0039505
   
   .dropdown label {
     margin-bottom: 3px;
@@ -105,11 +139,16 @@ tr {
     @endif
 	<div class="content-header">
 		<p>Dispo Enseignants: </p>
+<<<<<<< HEAD
 
 </div>
 
 
     <!--content start-->
+=======
+>>>>>>> f360606ccb2b4daa5a77cc5a1105ec26e587f71a
+    </div>
+>>>>>>> a59adc2abbcc43c9742eea8ee21246bfa0039505
 
 
 	<div class="dropdowncontainer">
@@ -209,6 +248,15 @@ tr {
    
 });
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+</x-dashboardSec>
+=======
+				   document.getElementById('select-semestre').addEventListener('change', function() {
+            const selectedSemestre = this.value;
+            const rows = document.querySelectorAll('.dispo-row');
+>>>>>>> a59adc2abbcc43c9742eea8ee21246bfa0039505
 
     </script>
 			  
@@ -217,6 +265,10 @@ tr {
  </body>
  
  </html>
+<<<<<<< HEAD
 
 </x-dashboardSec>
 
+=======
+>>>>>>> f360606ccb2b4daa5a77cc5a1105ec26e587f71a
+>>>>>>> a59adc2abbcc43c9742eea8ee21246bfa0039505
